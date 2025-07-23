@@ -135,7 +135,8 @@ If a .v file is generated in the generated/ folder, your environment is set up c
 
 ---
 
-IMAGE 1
+<img width="940" height="287" alt="image" src="https://github.com/user-attachments/assets/f47ef5c6-8bd0-486a-8ae1-cf6275bbcfb4" />
+
 
 ---
 
@@ -548,6 +549,7 @@ plic.mapUpInterrupt(3, demo.interrupt)
 ```sh
 sbt "runMain vexiiriscv.soc.micro.MicroSocSim --demo-peripheral leds=16,buttons=12"
 ```
+<img width="940" height="578" alt="image" src="https://github.com/user-attachments/assets/61cb2242-d3b1-45f5-b776-5b90c54b3673" />
 
 🖼️ You can view the LED/button peripheral in GTKWave via trace files.
 
@@ -594,10 +596,12 @@ To import this design into Vivado for FPGA simulation or synthesis, a few change
 
    ```verilog
    // Before
-   IMAGE 3
+   <img width="940" height="508" alt="image" src="https://github.com/user-attachments/assets/f23eb1e1-e2fc-46c2-9b22-26444a10a9ff" />
+
 
    // After
-   IMAGE 4
+   <img width="940" height="503" alt="image" src="https://github.com/user-attachments/assets/ad88bb1b-c985-46e0-8b72-5c056558c0ba" />
+
    ```
 
 3. **Update the memory file names**
