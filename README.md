@@ -585,7 +585,7 @@ This document describes how to take the VexiiRiscv-generated RTL and program mem
 After generating the SoC using the appropriate SBT command:
 
 ```bash
-sbt "runMain vexriscv.demo.MuraxWithRamInit"
+sbt "runMain vexiiriscv.soc.micro.MicroSocGen --ram-bytes=32768 --with-rvm --with-rvc --system-frequency=50000000 --demo-peripheral leds=16,buttons=12 --ram-elf VexiiFirmware/build/app/blinky/example-blinky.elf --reset-vector 0x80000000 --jtag-tap false --jtag-instruction false --xlen 32 --regfile-async --with-boot-mem-init"
 ```
 
 You will find new files in the VexiiRiscv output directory:
@@ -740,5 +740,6 @@ If your C program (running on the softcore) blinks an LED in every loop (or ever
 ## Final Output
 
 If all the above aspects are handled correctly—utilization, constraint matching, simulation expectations, and clock behavior—you'll achieve a **functionally correct FPGA implementation** of your custom softcore system, visible both in simulation and on real hardware.
+<img width="731" height="670" alt="image" src="https://github.com/user-attachments/assets/a6202fe3-0407-494b-9e4e-2cb9a3bcc65a" />
 
 ---
