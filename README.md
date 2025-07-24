@@ -124,6 +124,25 @@ sudo make install
 echo 'export PATH=/opt/riscv/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 ```
+⚙️ Cloning git repo
+```bash
+git clone --recursive https://github.com/SpinalHDL/VexiiRiscv.git
+cd VexiiRiscv
+
+# (optional) Compile riscv-isa-sim (spike), used as a golden model during the sim to check the dut behaviour (lock-step)
+cd ext/riscv-isa-sim
+mkdir build
+cd build
+../configure --prefix=$RISCV --enable-commitlog  --without-boost --without-boost-asio --without-boost-regex
+make -j$(nproc)
+cd ../../..
+
+# (optional) Compile RVLS, (need riscv-isa-sim (spike)
+cd ext/rvls
+make -j$(nproc)
+cd ../..
+```
+
 ✅ Verifying Your Setup
 To verify that everything is working, try running:
 
