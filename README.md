@@ -613,7 +613,6 @@ To import this design into Vivado for FPGA simulation or synthesis, a few change
 2. **Switch from `readmemb` to `readmemh`**
    Change the memory initialization lines like this:
 
-   ```verilog
    // Before
    <img width="940" height="508" alt="image" src="https://github.com/user-attachments/assets/f23eb1e1-e2fc-46c2-9b22-26444a10a9ff" />
 
@@ -621,7 +620,6 @@ To import this design into Vivado for FPGA simulation or synthesis, a few change
    // After
    <img width="940" height="503" alt="image" src="https://github.com/user-attachments/assets/ad88bb1b-c985-46e0-8b72-5c056558c0ba" />
 
-   ```
 
 3. **Update the memory file names**
    The generated `.bin` files need to be converted to `.mem` format compatible with Vivado.
